@@ -3,4 +3,4 @@
 ## Preview
 
 This screen shot from the app.
-![Screenshot_20240526_163952](https://github.com/joeshwoa/KiroDev_Q3/assets/96644682/59c7446b-c392-49fc-9c4a-41d495ac1e87)
+![Screenshot_20240526_165852](https://github.com/joeshwoa/KiroDev_Q3/assets/96644682/f1e059f4-3849-481b-8d68-af80339cfe96)
