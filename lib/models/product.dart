@@ -35,7 +35,7 @@ class Product {
     return Product(
       sold: json['sold'],
       images: List<String>.from(json['images']),
-      subcategory: json['subcategory']['name'],
+      subcategory: json['subcategory'][0]['name'], // edit: add this [0] because i not see that the subcategory is array
       ratingsQuantity: json['ratingsQuantity'],
       title: json['title'],
       description: json['description'],

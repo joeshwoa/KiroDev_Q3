@@ -7,24 +7,28 @@ class ProductItem extends StatelessWidget {
 
   const ProductItem({super.key, required this.product});
 
+  // edit: add padding to the card
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Column(
-        children: [
-          CachedNetworkImage(
-            imageUrl: product.imageCover,
-            placeholder: (context, url) => CircularProgressIndicator(),
-            errorWidget: (context, url, error) => Icon(Icons.error),
-          ),
-          ListTile(
-            title: Text(product.title),
-            subtitle: Text(product.description),
-          ),
-          Text('Price: \$${product.price}'),
-          Text('Sold: ${product.sold}'),
-          Text('Ratings: ${product.ratingsAverage} (${product.ratingsQuantity} ratings)'),
-        ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Card(
+        child: Column(
+          children: [
+            CachedNetworkImage(
+              imageUrl: product.imageCover,
+              placeholder: (context, url) => CircularProgressIndicator(),
+              errorWidget: (context, url, error) => Icon(Icons.error),
+            ),
+            ListTile(
+              title: Text(product.title),
+              subtitle: Text(product.description),
+            ),
+            Text('Price: \$${product.price}'),
+            Text('Sold: ${product.sold}'),
+            Text('Ratings: ${product.ratingsAverage} (${product.ratingsQuantity} ratings)'),
+          ],
+        ),
       ),
     );
   }

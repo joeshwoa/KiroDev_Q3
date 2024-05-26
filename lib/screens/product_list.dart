@@ -6,7 +6,7 @@ import '../models/product.dart';
 
 class ProductListScreen extends StatefulWidget {
   @override
-  _ProductListScreenState createState() => _ProductListScreenState();
+  State<ProductListScreen> createState() => _ProductListScreenState();
 }
 
 class _ProductListScreenState extends State<ProductListScreen> {
@@ -60,6 +60,8 @@ class _ProductListScreenState extends State<ProductListScreen> {
                     child: Pager(
                       currentPage: currentPage,
                       totalPages: numberOfPages,
+                      pageChangeIconColor: Theme.of(context).primaryColor, // edit: change the color to main to be more beautiful
+                      numberButtonSelectedColor: Theme.of(context).primaryColor, // edit: change the color to main to be more beautiful
                       onPageChanged: (page) {
                         setState(() {
                           currentPage = page;
