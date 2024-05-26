@@ -13,6 +13,7 @@ class ProductItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Card(
+        clipBehavior: Clip.antiAlias, // edit: add Clip.antiAlias to round the image corners
         child: Column(
           children: [
             CachedNetworkImage(
